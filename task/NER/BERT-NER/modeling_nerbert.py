@@ -1,5 +1,5 @@
 import torch.nn as nn
-from transformers.modeling_bert import BERT_PRETRAINED_MODEL_ARCHIVE_MAP, BertPreTrainedModel, BertModel, BertConfig
+from transformers import BERT_PRETRAINED_CONFIG_ARCHIVE_MAP as BERT_PRETRAINED_MODEL_ARCHIVE_MAP , BertPreTrainedModel, BertModel, BertConfig
 from torchcrf import CRF
 
 
