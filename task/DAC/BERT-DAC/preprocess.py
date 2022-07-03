@@ -38,7 +38,9 @@ def make_data(samples, path):
     for pid, sample in samples.items():
         for sent in sample['dialogue']:
             x = sent['speaker'] + '：' + sent['sentence']
-            assert sent['dialogue_act'] in tag2id
+            if 'dialogue_act' not in sent:
+                sent['dialogue_act'] = 'Request-Etiology'
+            assert sent['dialogue_act']  in tag2id
             y = tag2id.get(sent['dialogue_act'])
             out += x + '\t' + str(y) + '\n'
     with open(path, 'w', encoding='utf-8') as f:
