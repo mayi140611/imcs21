@@ -70,7 +70,8 @@ if __name__ == '__main__':
 
     train_set = load_json(os.path.join(data_dir, 'train.json'))
     dev_set = load_json(os.path.join(data_dir, 'dev.json'))
-    test_set = load_json(os.path.join(data_dir, 'test_input.json'))
+#     test_set = load_json(os.path.join(data_dir, 'test_input.json'))
+    test_set = load_json(os.path.join(data_dir, 'test.json'))
 
     # load normalized symptom
     sym2id = {value: key for key, value in pd.read_csv(os.path.join(data_dir, 'symptom_norm.csv'))['norm'].items()}
